@@ -1,0 +1,399 @@
+/*Global styles*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D2B48C;
+    color: #221811;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    background-color: #FEF6C2;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #D2B48C;
+    background-image: url('cup.jpg'); 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 80px;
+    padding-left: 90px;
+    color: #231814;
+    height: 128px;
+    
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    padding-top: 40px;
+}
+
+h2 {
+    color: #8C3826;
+}
+
+h3, dt {
+    color: #8C3826;
+}
+
+h4 {
+    background-color: #D2B48C;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+    padding-bottom: 0.25em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    clear: left;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.25em;
+    background-color: #231814;
+    width: 100%;
+    order: 2; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: .5em 1em;
+    border-bottom: 1px solid #D2B48C;
+}
+
+nav a:link {
+    color: #FEF6C2;
+}
+
+nav a:visited {
+    color: #D2B48C;
+}
+
+nav a:hover {
+    color: #CC9933;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+#homehero, #heromugs, #heroguitar, #herojobs {
+    order: 3; 
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+#homehero {
+    background-image: url('fadedroad50.jpg');
+}
+
+#heromugs {
+    background-image: url('threemugs.jpg');
+}
+
+#heroguitar {
+    background-image: url('guitar.jpg');
+}
+
+#herojobs {
+    background-image: url('coffeecup.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+main {
+    padding: 1em;
+    background-color: #FEF6C2;
+    display: block;
+    order: 4; 
+}
+
+main h2, main h3, main h4, main p, main div, main dl {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+main ul {
+    padding-left: 2em;
+}
+
+.details {
+    margin: 2em 0;
+    overflow: auto;
+}
+
+.floatleft {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #D2B48C;
+    font-size: 0.60em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+    border-top: 2px solid #8C3826;
+    order: 5; 
+}
+
+header a:link, header a:visited {
+    text-decoration: none;
+    color: #231814;
+}
+
+header a:hover {
+    color: #FEF6C2;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+
+.onethird {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+/* Table styles */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #D2B48E;
+}
+
+/* Form styles for narrow viewports */
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: .5em;
+}
+
+#mySubmit {
+    width: 9em;
+}
+
+@media (min-width: 600px) {
+    #wrapper {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 3px 3px 10px #333;
+    }
+    
+    header {
+        text-align: left;
+        padding-left: 105px;
+        background-color: #D2B48C;
+        background-image: url('cup.jpg'); 
+        background-size: 100px;
+        
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        padding-top: 45px;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    
+    nav li {
+        border-bottom: none;
+        border-right: 1px solid #D2B48C;
+        flex: 1;
+    }
+    
+    nav li:last-child {
+        border-right: none;
+    }
+    
+    #homehero, #heromugs, #heroguitar, #herojobs {
+        height: 300px;
+    }
+    
+    #herojobs {
+        background-image: url('herojobs.jpg');
+    }
+
+    .onethird {
+        float: left;
+        width: 33.333%;
+        padding: 0 1em;
+        box-sizing: border-box;
+    }
+    
+    main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    #mobile {
+        display: none;
+    }
+    
+    #desktop {
+        display: inline;
+    }
+    
+    .details {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    h4 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    /* Form styles for wider viewports */
+    form {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        gap: 1em;
+        width: 40%;
+        padding-left: 0;
+    }
+    
+    input[type="submit"] {
+        grid-column: 2;
+        width: 9em;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #wrapper {
+        display: grid;
+        grid-template:
+            "header header"
+            "nav hero"
+            "nav main"
+            "footer footer"
+            / 200px 1fr;
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        box-shadow: 3px 3px 10px #333;
+    }
+    
+    header {
+        grid-area: header;
+        background-image: url('coffeelogo.jpg'); 
+        background-color: #231814;
+        background-size: contain;
+        padding-left: 220px;
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 3em;
+        padding-top: 45px;
+        color: #FEF6C2;
+    }
+    
+    nav {
+        grid-area: nav;
+        text-align: left;
+    }
+    
+    main {
+        grid-area: main;
+        padding: 2em;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    
+    #homehero {
+        grid-area: hero;
+        background-image: url('fadedroad50.jpg');
+    }
+    
+    #heromugs {
+        grid-area: hero;
+        background-image: url('threemugs.jpg');
+    }
+    
+    #heroguitar {
+        grid-area: hero;
+        background-image: url('guitar.jpg');
+    }
+    
+    #herojobs {
+        grid-area: hero;
+        background-image: url('herojobs.jpg');
+    }
+    
+    #homehero, #heromugs, #heroguitar, #herojobs {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 1em;
+    }
+    
+    nav li {
+        border-right: none;
+        border-bottom: 1px solid #D2B48C;
+        text-align: left;
+    }
+    
+    header a:link, header a:visited {
+        color: #FEF6C2;
+    }
+    
+    header a:hover {
+        color: #CC9933;
+    }
+    
+    .onethird {
+        width: 33.333%;
+    }
+}
